@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-	grunt.initConfig({
+	grunt.initConfig(
 		browserify: {
 			watchMain: {
 				options: {
