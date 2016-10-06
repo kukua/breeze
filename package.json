@@ -1,7 +1,7 @@
 {
-  "name": "concava-gui",
+  "name": "Breeze",
   "version": "0.1.0",
-  "description": "Graphical interface for managing ConCaVa metadata.",
+  "description": "Graphical interface, showing devices from ConCaVa on a map.",
   "private": true,
   "scripts": {
     "postinstall": "bower install",
@@ -13,7 +13,7 @@
   "pre-commit": "lint",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kukua/concava-gui.git"
+    "url": "git+https://github.com/kukua/breeze.git"
   },
   "keywords": [
     "concava",
@@ -23,9 +23,9 @@
   "author": "Kukua Team <dev@kukua.cc>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kukua/concava-gui/issues"
+    "url": "https://github.com/kukua/breeze/issues"
   },
-  "homepage": "https://github.com/kukua/concava-gui#readme",
+  "homepage": "https://github.com/kukua/breeze#readme",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "es6-object-assign": "^1.0.2",

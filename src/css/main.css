@@ -1,0 +1,13 @@
+.controls {
+	width: 400px;
+	background-color: #333;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	height: 100%;
+}
+
+.controls .controls__inner {
+	padding: 20px;
+}

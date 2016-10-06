@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import { instance as user } from '../../../lib/user'
+import actions from '../actions/user'
 
-import { instance as user } from '../../lib/user'
-import actions from '../../actions/user'
 
 const mapStateToProps = (state) => {
     let { loading: isFetching, item } = state.user.login
@@ -19,14 +19,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class Login extends React.Component {
-
 	onSubmit(e) {
         e.preventDefault()
         let form = e.target
         this.props.onLogin(form.email.value, form.password.value).then((item) => {
+			user.set(item)
             this.context.router.replace('/')
         })
-        return
     }
 
 	render() {

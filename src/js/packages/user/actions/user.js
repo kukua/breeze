@@ -1,9 +1,8 @@
-import config from '../config'
-import { instance as user } from '../lib/user'
-import { checkStatus, parseJSON } from '../lib/fetch'
+import config from '../../../config'
+import { instance as user } from '../../../lib/user'
+import { checkStatus, parseJSON } from '../../../lib/fetch'
 
 export default {
-
     login (email, password) {
         return (dispatch) => {
             dispatch({ type: 'USER_LOGIN' })

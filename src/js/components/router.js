@@ -1,14 +1,15 @@
 import React from 'react'
 import { Router, Route, IndexRedirect, hashHistory } from 'react-router'
 import { instance as user } from '../lib/user'
+import notify from '../lib/notify'
 
 import Layout from './layout/master'
 import noMatch from './noMatch'
 
-import UserLogin from '../components/user/login'
-import UserRegister from '../components/user/register'
+import UserLogin from '../packages/user/components/login'
+import UserRegister from '../packages/user/components/register'
 
-import Breeze from '../components/breeze/index'
+import Breeze from '../packages/breeze/components/index'
 
 function requireAuth (nextState, replace) {
     if ( ! user.isLoggedIn) return replace ('/auth/login')
@@ -28,7 +29,6 @@ export default (
             <IndexRedirect to="map" />
 
             <Route path="map" component={Breeze} onEnter={requireAuth} />
-
             <Route path="auth/login" component={UserLogin} onEnter={isAuthenticated} />
             <Route path="auth/register" component={UserRegister} onEnter={isAuthenticated} />
 

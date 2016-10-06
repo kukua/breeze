@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { instance as user } from '../../lib/user'
-import actions from '../../actions/user'
+import { instance as user } from '../../../lib/user'
+import actions from '../actions/user'
 import { Link } from 'react-router'
 
 const mapStateToProps = (state) => {
